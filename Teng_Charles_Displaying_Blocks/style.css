@@ -1,0 +1,35 @@
+#background{
+    width: 750px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(213, 210, 174);
+}
+#header{
+    display: flex;
+    align-items: center;
+    padding-left: 160px;
+}
+.headerCol{
+    margin: 5px;
+}
+.column{
+    display: block;
+}
+.row{
+    display: inline-block;
+}
+.red{
+    background-color: rgb(243, 104, 102);
+}
+.blue{
+    background-color: skyblue;
+}
+#catRoom{
+    display: inline-block;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+}
