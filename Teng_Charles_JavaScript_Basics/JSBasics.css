@@ -1,0 +1,59 @@
+#background{
+    background-color: rgb(18,53,91);
+    width: 970px;
+    padding: 1px;
+}
+
+#header{
+    background-color: rgb(215, 38, 56);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 1px 20px;
+    color: rgb(191, 215, 234);
+}
+
+#directory{
+    background-color: rgb(8, 126, 139);
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    width: 180px;
+    color: rgb(191, 215, 234);
+    font-size: 12px;
+}
+a{
+    color: rgb(82, 222, 229);
+}
+p{
+    color: rgb(191, 215, 234);
+    font-size: 12px;
+}
+
+.v{
+    color: rgb(118, 146, 255);
+}
+
+.col{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#description{
+    background-color: rgb(12, 24, 33);
+    border-radius: 25px;
+    width: 705px;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(191, 215, 234);
+}
+#description h2{
+    color: rgb(191, 215, 234);
+}
+
+#usefulInfo{
+    background-color: rgb(92, 102, 114);
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
