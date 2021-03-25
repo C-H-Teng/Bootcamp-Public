@@ -42,14 +42,12 @@
 
 #aboutMe h2{
     color: white;
-    background-image: linear-gradient(to bottom, rgb(171, 171, 176), rgb(136, 133, 147));
-    background-image: linear-gradient(to top, rgb(171, 171, 176), rgb(136, 133, 147));
+    background-image: linear-gradient(to bottom, rgb(171, 171, 176), rgb(136, 133, 147), rgb(171, 171, 176));
 }
 
 .descBox h2{
     color: white;
-    background-image: linear-gradient(to bottom, rgb(171, 171, 176), rgb(136, 133, 147));
-    background-image: linear-gradient(to top, rgb(171, 171, 176), rgb(136, 133, 147));
+    background-image: linear-gradient(to bottom, rgb(171, 171, 176), rgb(136, 133, 147), rgb(171, 171, 176));
 }
 
 .descBox {
