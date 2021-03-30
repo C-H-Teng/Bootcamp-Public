@@ -1,0 +1,228 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, p, a, li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+p, li{
+    font-size: 10pt;
+    padding-bottom: 2px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.cyan{
+    color: cyan;
+}
+
+.turq{
+    color: rgb(38, 92, 151);
+}
+
+.red{
+    color: red;
+}
+
+.italics{
+    font-style: italic;
+}
+
+#container{
+    width: 970px;
+}
+
+#pgLogo{ /*LOGO DIV START*/
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    top: 0px;
+    z-index: 2;
+}
+
+#pgLogo > img{
+    width: 100px;
+} /*LOGO DIV END*/
+
+#header{ /*HEADER DIV START*/
+    background-image: linear-gradient(to bottom, rgb(57,108,160), rgb(90,131,171), rgb(57,108,160));
+    color: white;
+    padding: 10px 0px;
+    width: 970px;
+    margin-top: -18px;
+}
+
+#header > h1{
+    padding-left: 20px;
+}/*HEADER DIV END*/
+
+#content{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.bgGradient{
+    background-image: linear-gradient(to bottom, rgb(229,229,229), white 15%);
+}
+
+#sideBar{ /*SIDEBAR DIV START*/
+    padding: 2px;
+    width: 200px;
+}
+
+#sideBar > p{
+    font-weight: bold;
+    width: 200px;
+    margin-top: 15px;
+}
+
+.turqButton{
+    background-color: rgb(68,118,170);
+    padding: 5px;
+    margin: 20px 0px 5px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 2px darkslategray;
+}
+
+.turqButton a{
+    width: 200px;
+    color: white;
+    text-decoration: none;
+}
+
+.ojButton{
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 2px darkslategray;
+    margin-bottom: 20px;
+}
+
+.ojButton a{
+    color: white;
+    text-decoration: none;
+    width: 200px;
+}
+
+#ad{
+    margin-top: 20px;
+    background-image: url(./images/ad_background.png);
+    height: 300px;
+    text-align: center;
+    box-shadow: 2px 2px 5px black;
+}
+
+#ad > img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px
+}
+
+#ad > h2{
+    color: white;
+    padding-top: 15px;
+}
+
+#ad > a{
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(72,196,222);
+    padding: 5px 35px;
+} /*SIDEBAR DIV END*/
+
+#contentMain { /*CONTENTMAIN DIV START*/
+    width: 748px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dns img{
+    width: 20px;
+}
+
+.businessInfo{
+    width: 200px;
+    text-align: end;
+    padding-right: 10px;
+}
+
+.phoneNum > img{
+    width: 20px;
+}
+
+.phoneNum > .cyan{
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.contentBreak{
+    padding: 10px 10px 10px 0px;
+    width: 748px;
+}
+
+.turq > h2{
+    font-weight: bold;
+    width: 748px;
+}
+
+#contentMain > ul, #contentMain > ol{
+    padding-left: 50px;
+}
+
+#contentMain > img{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#bigThree{
+    border-width: 5px 5px 0px;
+    border-style: solid;
+    border-color: rgb(48,136,223);
+    width: 670px;
+    margin-top: 15px;
+    margin-left: 50px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#bigThree > img{
+    width: 150px;
+}
+
+.big3title {
+    font-size: 16pt;
+    padding-right: 130px;
+    font-weight: bold;
+}
+
+#bigThree > p{
+    width: 507px;
+}
+
+.lrnMore{
+    display: block;
+    padding-top: 5px;
+}
+
+.lrnMore > a{
+    text-decoration: none;
+    color: rgb(38, 92, 151);
+}
