@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width: 970px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#header{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.imgContainer{
+    width: 21%;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.imgContainer > img{
+    width: 100%;
+}
+
+button{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14pt;
+    box-shadow: 3px 3px 3px gray;
+}
