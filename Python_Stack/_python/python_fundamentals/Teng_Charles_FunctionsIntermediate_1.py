@@ -8,7 +8,6 @@
 
 import random
 def randInt(min=0, max=100):
-    num = random.random()
     if(max < min): #sets max to min+1
         max = min + 1
         print("Setting max to", max)
@@ -16,14 +15,8 @@ def randInt(min=0, max=100):
     if(max < 0):
         max = 1
     #end of if statement
-    num = num * max + min
-    if(num > max):
-        num = max
-    #end of if statement
-    if(num < min):
-        num = min
-    #end of if statement
-    return int(num)
+    num = random.random() * (max - min) + min
+    return round(num)
 #end of def
 
 print("0-100:", randInt()) 		    # should print a random integer between 0 to 100
