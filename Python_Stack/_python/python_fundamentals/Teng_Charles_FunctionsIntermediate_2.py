@@ -39,12 +39,13 @@ students = [
     {'first_name' : 'KB', 'last_name' : 'Tonel'}
 ]
 
-def iterateDict(s):
-    for x in range(len(s)):
-        print("first_name -", students[x]["first_name"]+" last_name -", students[x]["last_name"])
+def iterateDict(some_list, some_key):
+    for x in some_list:
+        print(x[some_key])
     #end of for loop
 #end of def
-iterateDict(students)
+iterateDict(students, "first_name")
+iterateDict(students, "last_name")
 
 # should output: (it's okay if each key-value pair ends up on 2 separate lines;
 # bonus to get them to appear exactly as below!)
