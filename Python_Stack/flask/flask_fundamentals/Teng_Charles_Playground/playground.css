@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    width: 970px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#header{
+    width: 970px;
+    text-align: center;
+    margin: 20px;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: blue;
+    border: 3px solid black;
+}
