@@ -36,7 +36,6 @@ def palindrome(str):
         else:
             return False
     #end of for loop
-    return str
 #end of def
 print(palindrome("racecar"))
 print(palindrome("bbo"))
