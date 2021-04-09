@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.red{
+    width: 100px;
+    height: 100px;
+}
+
+.black{
+    width: 100px;
+    height: 100px;
+}

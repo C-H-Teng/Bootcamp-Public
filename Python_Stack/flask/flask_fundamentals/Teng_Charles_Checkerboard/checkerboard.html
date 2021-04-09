@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for("static", filename="checkerboard.css")}}">
+    <title>Charles Teng's Checkerboard assignment</title>
+</head>
+<body>
+    <div id="container">
+        {% for y in range(row): %} <!--start of row for loop-->
+        <div class="row">
+        {% if(y % 2 == 0) %} <!--start of even row if statement-->
+                {% for x in range(col): %}
+                    {% if(x % 2 == 0): %}
+                        <div class="red"></div>
+                        {% else: %}
+                        <div class="black"></div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %} <!--end of even row if statement-->
+            {% if(y % 2 == 1) %} <!--start of odd row if statement-->
+                {% for x in range(col): %}
+                    {% if(x % 2 == 0): %}
+                        <div class="black"></div>
+                    {% else: %}
+                        <div class="red"></div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %} <!--end of odd row if statement-->
+            </div>
+        {% endfor %} <!--end of row for loop-->
+    </div>
+    <style>
+        .red{
+            background-color: {{col1}};
+        }
+        
+        .black{
+            background-color: {{col2}};
+        }
+    </style>
+</body>
+</html>
