@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+#container > h1{
+    background-image: linear-gradient(to bottom, skyblue, silver);
+    width: 600px;
+    text-align: center;
+}
+
+#container > h2{
+    background-image: linear-gradient(to bottom, silver, orange);
+    width: 600px;
+    text-align: center;
+    padding-bottom: 5px;
+}
