@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <link rel="Stylesheet" type="text/css" href="{% static "style.css" %}">
+    <link rel="stylesheet" type= text/css href="{% static "bootstrap.css" %}">
+    <title>Charles Teng's Dojo Survey assignment</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Information Submitted:</h1>
+        <p>Name: {{ name_on_template }}</p>
+        <p>E-mail: {{ email_on_template }}</p>
+        <p>Gender: {{ gender_on_template }}</p>
+        <p>Languages Learned: {{ langLrnd_on_template }}</p>
+    </div>
+</body>
+</html>
