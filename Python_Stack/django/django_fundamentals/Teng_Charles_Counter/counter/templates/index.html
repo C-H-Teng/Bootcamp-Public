@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "styles.css" %}">
+    <title>Charles Teng's Counter assignment</title>
+</head>
+<body>
+    <div id="container">
+        <h3>Number of true visits:</h3>
+        <h2>{{request.session.total_count}}</h2>
+        <h3>Visits after previous destruction:</h3>
+        <h2>{{request.session.adjusted_count}}</h2>
+        <a href="./add_two">Add two</a>
+        <form action="./custom_add" method="POST">
+            {% csrf_token %}
+            Add to visits: <input type="number" id="custom_num" name="custom_num">
+            <button type="submit" value="submit">Add!</button>
+        </form>
+        <a href="./destroy_session">Destroy count</a>
+    </div>
+</body>
+</html>
