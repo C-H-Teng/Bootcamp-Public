@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "styles.css" %}">
+    <title>Charles Teng's Users with Templates assignment</title>
+</head>
+<body>
+    <div id="container">
+        <h1>All the Users</h1>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+            {% for user in users_list %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.email_address }}</td>
+                    <td>{{ user.age }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <hr>
+
+        <h1>Add a User</h1>
+
+        <form action="/add_user" method="POST">
+            {% csrf_token %}
+
+            <div id="input_fields">
+                <!--First Name-->
+                <p>
+                    First Name:
+                    <input type="text" id="fname" name="fname">
+                </p>
+                <!--Last Name-->
+                <p>
+                    Last Name:
+                    <input type="text" id="lname" name="lname">
+                </p>
+                <!--Email-->
+                <p>
+                    Email:
+                    <input type="text" id="email" name="email">
+                </p>
+                <!--Age-->
+                <p>
+                    Age:
+                    <input type="text" id="age" name="age">
+                </p>
+            </div>
+
+            <button type="submit" value="submit">Add User</button>
+        </form>
+
+    </div> <!--container div end-->
+</body>
+</html>

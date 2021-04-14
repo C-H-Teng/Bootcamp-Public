@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+th, td{
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: silver;
+}
+
+hr{
+    height: 1px;
+    width: 600px;
+    border-width: 2px;
+    border-color: black;
+    margin: 5px 0px;
+}
+
+form > button{
+    width: 100px;
+}
+
+#input_fields{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 520px;
+    margin: 10px;
+    flex-wrap: wrap;
+    line-height: 30px;
+}
+
+form > button{
+    box-shadow: 2px 2px black;
+}
