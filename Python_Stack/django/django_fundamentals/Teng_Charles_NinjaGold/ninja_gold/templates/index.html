@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "styles.css" %}">
+    <title>Charles Teng's Ninja Gold assignment</title>
+</head>
+<body>
+    <div id="container">
+        <h3>Your Gold: {{ request.session.gold_count }}</h3>
+        <form action="/reset" method="POST">
+            {% csrf_token %}
+            <button type="submit" value="submit">Reset</button>
+        </form>
+
+        <div id="gather_loc"> <!--gather location div start-->
+            <div class="box"> <!--farm div-->
+                <h2>Farm</h2>
+                <h3>(earns 10-20 gold)</h3>
+                    <form action="/process_money" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="make_gold" value="farm">
+                    <button type="submit" value="submit">Find Gold!</button>
+                </form>
+            </div> <!--farm div end-->
+
+            <div class="box"> <!--cave div-->
+                <h2>Cave</h2>
+                <h3>(earns 5-10 gold)</h3>
+                <form action="/process_money" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="make_gold" value="cave">
+                    <button type="submit" value="submit">Find Gold!</button>
+                </form>
+            </div> <!--cave div end-->
+
+            <div class="box"> <!--house div-->
+                <h2>House</h2>
+                <h3>(earns 2-5 gold)</h3>
+                <form action="/process_money" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="make_gold" value="house">
+                    <button type="submit" value="submit">Find Gold!</button>
+                </form>
+            </div> <!--house div end-->
+
+            <div class="box"> <!--casino div-->
+                <h2>Casino</h2>
+                <h3>(earns/takes 0-50 gold)</h3>
+                <form action="/process_money" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="make_gold" value="casino">
+                    <button type="submit" value="submit">Find Gold!</button>
+                </form>
+            </div> <!--casino div end-->
+        </div> <!--gather_loc div end-->
+
+        <h3>Activities:</h3>
+        <div class="activities_log">
+            {% for msg in request.session.activity %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        </div>
+
+    </div> <!--container div end-->
+</body>
+</html>
