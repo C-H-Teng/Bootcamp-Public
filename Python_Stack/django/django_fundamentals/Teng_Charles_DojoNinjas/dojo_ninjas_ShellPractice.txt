@@ -1,0 +1,86 @@
+Query: Create 3 new dojos
+>>> Dojos.objects.create(name="Wombat", city="Los Angeles", state="CA")
+<Dojos: Dojos object (1)>
+>>> Dojos.objects.create(name="Capybara", city="Dallas", state="TX")
+<Dojos: Dojos object (2)>
+>>> Dojos.objects.create(name="Porcupine", city="Orlando", state="FL")
+<Dojos: Dojos object (3)>
+
+
+Query: Delete the 3 dojos you just created
+>>> dojo = Dojos.objects.get(id=1)
+>>> dojo.delete()
+(1, {'dojo_ninjas.Dojos': 1})
+>>> dojo = Dojos.objects.get(id=2)
+>>> dojo.delete()
+(1, {'dojo_ninjas.Dojos': 1})
+>>> dojo = Dojos.objects.get(id=3)
+>>> dojo.delete()
+(1, {'dojo_ninjas.Dojos': 1})
+
+
+Query: Create 3 more dojos
+>>> Dojos.objects.create(name="Tiger", city="Irvine", state="CA")
+<Dojos: Dojos object (4)>
+>>> Dojos.objects.create(name="Lion", city="Manhattan", state="NY")
+<Dojos: Dojos object (5)>
+>>> Dojos.objects.create(name="Leopard", city="Raleigh", state="NC")
+<Dojos: Dojos object (6)>
+
+
+Query: Create 3 ninjas that belong to the first dojo
+>>> Ninjas.objects.create(dojo_id=Dojos.objects.get(id=4), first_name="Bob", last_name="Dillan")
+<Ninjas: Ninjas object (1)>
+>>> Ninjas.objects.create(dojo_id=Dojos.objects.get(id=4), first_name="Lisa", last_name="Miller")
+<Ninjas: Ninjas object (2)>
+>>> Ninjas.objects.create(dojo_id=Dojos.objects.get(id=4), first_name="Anna", last_name="Ross")
+<Ninjas: Ninjas object (3)>
+
+
+Query: Create 3 ninjas that belong to the second dojo
+>>> Ninjas.objects.create(dojo_id=5, first_name="Chuck", last_name="Greene")
+<Ninjas: Ninjas object (4)>
+>>> Ninjas.objects.create(dojo_id=Dojos.objects.get(id=5), first_name="Dan", last_name="Norris")
+<Ninjas: Ninjas object (5)>
+>>> Ninjas.objects.create(dojo_id=Dojos.objects.get(id=5), first_name="Milly", last_name="Emmett")
+<Ninjas: Ninjas object (6)>
+
+
+Query: Create 3 ninjas that belong to the third dojo
+>>> Ninjas.objects.create(dojo_id=Dojos.objects.get(id=6), first_name="Kelly", last_name="Ashe")
+<Ninjas: Ninjas object (7)>
+>>> Ninjas.objects.create(dojo_id=Dojos.objects.get(id=6), first_name="Gwen", last_name="Ashe")
+<Ninjas: Ninjas object (8)>
+>>> Ninjas.objects.create(dojo_id=Dojos.objects.get(id=6), first_name="Ben", last_name="Hanson")
+<Ninjas: Ninjas object (9)>
+
+
+Query: Retrieve all the ninjas from the first dojo
+>>> dojo = Dojos.objects.get(id=4)
+>>> dojo.ninjas.all()
+<QuerySet [<Ninjas: Ninjas object (1)>, <Ninjas: Ninjas object (2)>, <Ninjas: Ninjas object (3)>]>
+
+
+Query: Retrieve all the ninjas from the last dojo
+>>> dojo = Dojos.objects.last()   
+>>> dojo.ninjas.all()
+<QuerySet [<Ninjas: Ninjas object (7)>, <Ninjas: Ninjas object (8)>, <Ninjas: Ninjas object (9)>]>
+
+
+Query: Retrieve the last ninja's dojo
+>>> ninja.dojo_id       
+<Dojos: Dojos object (6)>
+
+Query: Add a new text field called "desc" to your Dojo class
+Create and run the migration files to update the table in your database. If needed, provide a default value of "old dojo"
+
+teng_charles_dojoninjas> python manage.py makemigrations
+Migrations for 'dojo_ninjas':
+  dojo_ninjas\migrations\0002_dojos_desc.py
+    - Add field desc to dojos
+teng_charles_dojoninjas> python manage.py migrate
+
+
+Query: Create a new dojo
+Dojos.objects.create(name="Rabbit", city="Tustin", state="CA")
+<Dojos: Dojos object (7)>
