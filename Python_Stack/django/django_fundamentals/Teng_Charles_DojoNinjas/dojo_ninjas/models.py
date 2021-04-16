@@ -11,7 +11,7 @@ class Dojos(models.Model):
     #ninjas = list of ninjas in specified dojo
 
 class Ninjas(models.Model):
-    dojo_id = models.ForeignKey(Dojos, related_name="ninjas", on_delete=models.CASCADE)
+    dojo_id = models.ForeignKey(Dojos, related_name="ninjas", on_delete=models.CASCADE) #don't name "id" in future to avoid confusion with actual ID
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)

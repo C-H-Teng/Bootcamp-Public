@@ -9,6 +9,76 @@
     <title>Charles Teng's Dojos & Ninjas assignment</title>
 </head>
 <body>
-    
+    <div id="container">
+
+        <div id="add_forms"> <!--add_forms start-->
+            <div class="form_section"> <!--dojo form start-->
+                <h1>Add a Dojo</h1>
+                <form action="/add_dojo" method="POST">
+                    {% csrf_token %}
+                    <p>
+                        Name
+                        <input type="text" id="d_name" name="d_name">
+                    </p>
+                    <p>
+                        City
+                        <input type="text" id="d_city" name="d_city">
+                    </p>
+                    <p>
+                        State
+                        <input type="text" id="d_state" name="d_state">
+                    </p>
+                    <button type="submit" value="submit">Add</button>
+                </form>
+            </div> <!--dojo form end-->
+
+            <div class="form_section"> <!--ninja form start-->
+                <h1>Add a Ninja</h1>
+                <form action="/add_ninja" method="POST" id="add_ninja">
+                    {% csrf_token %}
+                    <p>
+                        First Name
+                        <input type="text" id="fname" name="fname">
+                    </p>
+                    <p>
+                        Last Name
+                        <input type="text" id="lname" name="lname">
+                    </p>
+                    <p>
+                        Dojo
+                        <select name="dojoID" id="dojoID">
+                            {% for dojo in dojos_list %}
+                                <option value={{ dojo.id }}>{{ dojo.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </p>
+                    <button type="submit" value="submit">Add</button>
+                </form>
+            </div><!--ninja form end-->
+        </div> <!--add_forms div end-->
+
+        <hr>
+
+        <div id="dojo_list"> <!--dojo_list div start-->
+            <h1>All the Dojos</h1>
+
+            {% for dojo in dojos_list %}
+                <form action="/delete" method="POST">
+                    {% csrf_token %}
+                    <h3>
+                        Ninjas at the {{ dojo.name }} Dojo - {{ dojo.ninjas.count }}
+                        <button type="submit" name="del_dojo" value={{ dojo.id }}>Delete</button>
+                    </h3>
+                </form>
+
+                <ul>
+                    {% for ninja in dojo.ninjas.all %}
+                        <li>{{ ninja.first_name }} {{ ninja.last_name }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div> <!--dojo_list div end-->
+
+    </div> <!--container div end-->
 </body>
 </html>

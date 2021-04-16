@@ -2,3 +2,57 @@
     margin: 0px;
     padding: 0px;
 }
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 970px;
+}
+
+#add_forms{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 970px;
+}
+
+.form_section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form > p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.form_section form button{
+    padding: 5px;
+    box-shadow: 2px 2px black;
+    margin: 10px;
+}
+
+hr{
+    width: 800px;
+    height: 1px;
+    margin: 10px;
+    border-color: black;
+    background-color: black;
+}
+
+#dojo_list{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li{
+    margin-left: 40px;
+}
