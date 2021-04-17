@@ -2,3 +2,46 @@
     margin: 0px;
     padding: 0px;
 }
+
+#container{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form > p{
+    width: 300px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+tr:nth-child(even){
+    background-color: silver;
+}
+
+td, th{
+    padding: 5px;
+}
+
+button{
+    padding: 5px;
+    box-shadow: 2px 2px black;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

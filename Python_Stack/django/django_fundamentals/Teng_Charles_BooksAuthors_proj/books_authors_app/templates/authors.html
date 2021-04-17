@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "styles.css" %}">
+    <title>Charles Teng's Books & Authors assignment</title>
+</head>
+<body>
+    <div id="container">
+        <!-- author form start -->
+            <form action="/add_author" method="POST">
+                {% csrf_token %}
+                <h1>Add an Author</h1>
+                <p>
+                    First Name
+                    <input type="text" name="fname" id="fname">
+                </p>
+                <p>
+                    Last Name
+                    <input type="text" name="lname" id="lname">
+                </p>
+                <p>
+                    Notes
+                    <textarea name="notes" id="notes" rows="5" cols="22"></textarea>
+                </p>
+                <button type="submit" value="submit">Add</button>
+                <a href="/">Go to list of books</a>
+            </form> <!-- author form end -->
+
+        <table> <!--author table start-->
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Details</th>
+            </tr>
+            {% for authors in authors_list %}
+                <tr>
+                    <td>{{ authors.id }}</td>
+                    <td>{{ authors.first_name }}</td>
+                    <td>{{ authors.last_name }}</td>
+                    <td><a href="/authors/{{ authors.id }}">View</a></td>
+                </tr>
+            {% endfor %}
+        </table><!--book table end-->
+
+    </div> <!--container div end-->
+</body>
+</html>
