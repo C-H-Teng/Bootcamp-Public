@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    margin: 20px;
+}
+
+.line{
+    display: flex;
+    align-items: baseline;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description{
+    margin-bottom: 50px;
+}

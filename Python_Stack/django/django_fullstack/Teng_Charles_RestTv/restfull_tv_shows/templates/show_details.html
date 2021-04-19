@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "styles_details.css" %}">
+    <title>Charles Teng's Semi-Restfull TV Shows assignment</title>
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <h1>TV show {{ show.id }}</h1>
+            <a href="/shows">Home</a>
+        </div>
+        <div class="line">
+            <h3>Title:</h3>
+            <p>{{ show.title }}</p>
+        </div>
+        <div class="line">
+            <h3>Network:</h3>
+            <p>{{ show.network }}</p>
+        </div>
+        <div class="line">
+            <h3>Release Date:</h3>
+            <p>{{ show.release }}</p>
+        </div>
+        <div class="line description">
+            <h3>Description:</h3>
+            <p>{{ show.desc }}</p>
+        </div>
+        <h4>Last Updated: {{ show.updated_at }}</h4>
+        <a href="/shows/{{ show.id }}/edit">Edit</a> | <a href="/shows/{{ show.id }}/delete">Delete</a>
+    </div> <!--container div end-->
+</body>
+</html>
