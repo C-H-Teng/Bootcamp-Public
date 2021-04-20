@@ -24,14 +24,21 @@
             </div>
             <div class="row">
                 <input type="text" name="n_network" id="n_network">
-                <input type="date" name="n_release" id="n_release">
+                <input type="date" name="n_release" id="n_release" max="{{ present }}">
             </div>
             <h3>Description</h3>
             <div class="row description">
-                <input type="text" name="n_desc" id="n_desc">
+                <textarea name="n_desc" id="n_desc"></textarea>
             </div>
             <button type="submit" value="submit">Create</button>
         </form>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div> <!--container div end-->
 </body>
 </html>

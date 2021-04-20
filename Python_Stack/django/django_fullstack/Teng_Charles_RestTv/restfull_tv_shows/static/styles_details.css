@@ -21,3 +21,8 @@
 .description{
     margin-bottom: 50px;
 }
+
+.description > textarea{
+    width: 500px;
+    height: 200px;
+}

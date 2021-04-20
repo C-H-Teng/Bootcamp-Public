@@ -17,14 +17,17 @@
     justify-content: space-between;
 }
 
-.description > input{
+.description > textarea{
     width: 500px;
     height: 200px;
-    vertical-align: top;
 }
 
 #container > form > button{
     margin-left: 45%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.messages{
+    color: red;
 }
