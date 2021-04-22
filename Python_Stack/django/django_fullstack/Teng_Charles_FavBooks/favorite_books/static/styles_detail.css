@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#header{
+    margin: 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+hr{
+    width: 99%;
+    height: 2px;
+    background-color: black;
+}
+
+#container{
+    margin: 10px;
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+h3, h4{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+textarea{
+    width: 300px;
+    max-width: 500px;
+    height: 200px;
+    max-height: 350px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#book_details{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+
+.row > a{
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    padding: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px black;
+}
+
+.row > button{
+    padding: 5px;
+    box-shadow: 2px 2px black;
+}
+
+ul{
+    margin-left: 30px;
+}
+
