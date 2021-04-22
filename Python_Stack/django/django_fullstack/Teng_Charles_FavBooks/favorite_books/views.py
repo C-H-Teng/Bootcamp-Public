@@ -86,11 +86,19 @@ def book_detail(request, b_id):
     return render(request, "book_detail.html", context)
 
 def book_edit(request, b_id):
-    book = Book.objects.get(id=b_id)
-    book.title = request.POST["b_title"]
-    book.desc = request.POST["b_desc"]
-    book.save()
-    return redirect(f"/book/{b_id}")
+    errors = User.objects.book_validator(request.POST)
+    
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+        return redirect(f"/book/{b_id}")
+
+    else:
+        book = Book.objects.get(id=b_id)
+        book.title = request.POST["b_title"]
+        book.desc = request.POST["b_desc"]
+        book.save()
+        return redirect(f"/book/{b_id}")
 
 def book_delete(request, b_id):
     book = Book.objects.get(id=b_id)
