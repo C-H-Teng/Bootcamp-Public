@@ -1,0 +1,15 @@
+.App {
+  width: 300px;
+  margin: 20px;
+}
+
+.App > h3{
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  justify-content: space-between;
+}
