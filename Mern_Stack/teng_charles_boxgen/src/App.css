@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+
+#boxSection{
+  display: flex;
+  flex-direction:row;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
