@@ -1,0 +1,40 @@
+table, td, th, tr {
+  border: 1px solid black;
+  margin: 5px;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(214, 214, 214);
+}
+
+th {
+  background-color: gray;
+  color: white;
+}
+
+table > tr > td > button {
+  background-color: cadetblue;
+  color: white;
+  padding: 5px 10px;
+}
+
+button, h3 {
+  margin: 5px;
+}
+
+h3 {
+  color: blue
+}
+
+form > button {
+  background-color: skyblue;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
