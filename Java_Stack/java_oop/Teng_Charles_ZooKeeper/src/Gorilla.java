@@ -8,7 +8,7 @@ class Gorilla extends Mammal {
 
 	public void throwSomething() {
 		this.energy -= 5;
-		System.out.println("The groilla threw something at someone.");
+		System.out.println("The gorilla threw something at someone.");
 	}
 
 	public void climb() {

@@ -15,4 +15,8 @@ public class Mammal {
 	public int displayEnergy() {
 		return this.energy;
 	}
+	
+	public void setEnergy(int value) {
+		this.energy = value;
+	}
 } // class end
