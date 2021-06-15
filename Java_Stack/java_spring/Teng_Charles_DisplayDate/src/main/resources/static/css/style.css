@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+#home{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#blue{
+	color: blue;
+}
+
+#green{
+	color: green;
+}
