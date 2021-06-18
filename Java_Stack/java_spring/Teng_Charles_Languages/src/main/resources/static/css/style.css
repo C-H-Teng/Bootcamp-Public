@@ -1,0 +1,75 @@
+@charset "ISO-8859-1";
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+.container{
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.header{
+	display: flex;
+	flex-direction: row;
+	align-items: top;
+	justify-content: space-around;
+}
+
+table{
+	margin: 5px;
+}
+
+td{
+	padding: 5px;
+}
+
+table, th, td{
+	border: 1px solid black;
+}
+
+tr:nth-child(even){
+	background-color: silver;
+}
+
+.row{
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 300px;
+}
+
+.button{
+	text-align: right;
+	margin: 10px;
+}
+
+.aliRight{
+	text-align: right;
+	margin: 10px;
+}
+
+.buttonLink > input{
+	background: none;
+	text-decoration: underline;
+	border: none;
+	color: blue;
+	padding: 0;
+	cursor: pointer;
+	font-family: arial, sans-serif;
+}
+
+.button > input{
+	padding: 3px;
+}
+
+.error{
+	color: red;
+}
